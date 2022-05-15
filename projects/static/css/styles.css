@@ -1,0 +1,26 @@
+body{
+    font-family: 'Roboto', Helvetica, sans-serif;
+    color:#414042;
+    font-size: 1em;
+    line-height: 1.2em;
+}
+.geo-header{
+    background-color: #414042;
+   
+}
+.geo-header h1{
+    color:#FFF;
+    line-height: 2em;
+}
+.geo-tab-header{
+    border-bottom: 1px solid #414042;
+}
+div.geo-logo{
+    min-width:130px;
+    
+}
+label{
+    min-width: 200px !important;
+    display: inline-block !important;
+    font-weight: 400;
+}
