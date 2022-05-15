@@ -1,0 +1,36 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<div class="row pt-4">
+  <div class="col">
+    <div class=""><h5>Project: {{ project.projectnumber }}</h5></div>
+  </div>
+</div>
+<div class="row pt-2 pb-4">
+  <div class="col col-lg-4">
+      <div class="col col-12"><label>Title:</label>{{ project.title }}</div>
+      <div class="col col-12"><label>Description:</label>{{ project.description }} </div>
+      <div class="col col-12"><label>Start date:</label>{{ project.startdate }} </div>
+      <div class="col col-12"><label>End date:</label>{{ project.enddate }} </div>
+  </div>
+ 
+
+</div>
+</div>
+</div>
+</div>
+<div>{{project.projectlink_set.all|length}}</div>
+<div class="row">
+  <div class="col-10">
+   
+    {% for plink in project.projectlink_set.all %}
+    <div>Titel: {{plink.linkname}}</div>
+    {% if plink.categoryid == 1 %}
+    <div>Title: {{plink.linkname}}</div>
+    <div>File: <a target="_blank" rel="no-refferer" href="{{ plink.link }}">{{plink.link}}</a></div>
+  </div>
+  {% endif %}
+  {% endfor %}
+</div>
+{% endblock %}
